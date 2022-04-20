@@ -56,10 +56,12 @@ A partida termina quando um jogador fica com apenas duas peças e o adversário 
 <!-- Requirements -->
 <div align="left" class='container'>
 	<h2 align="left">👨‍💻 Pré-requisitos </h2>
+<!--
 	<p align="left">Python3 instalado</p>
   <p align="left">Jupyter instalado</p>
   	<p align="left">OU</p>
   	<p align="left">Conta no Google Colab</p>
+ -->
 </div>
 
 
