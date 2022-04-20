@@ -1,7 +1,4 @@
-# jogo-trilha
-
-
-# Machine-Learning-Guia-O-Reilly
+# Jogo Trilha
 
 
  <!-- Explicação do projeto -->
