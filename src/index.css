@@ -1,0 +1,96 @@
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.game-info {
+    margin-left: 20px;
+    margin-right: 100px;
+    margin-top: 20px;
+    font-size: 24px;
+    width: 30%;
+}
+
+td {
+    text-align: center;
+}
+.game-rules {
+    margin-top: 50px;
+    font-size: 24px;
+}
+.accordion{
+    font-size: 20px;
+    text-align: justify;
+}
+.game-board {
+    position: relative;
+    width: 900px;
+    height: 900px;
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+
+.grid-container {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+    background-image: url("game-board.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* point location on the grid*/
+#point0, #point9, #point21 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+#point3, #point10, #point18 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+#point6, #point11, #point15 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+#point1, #point4, #point7, #point16, #point19, #point22 {
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+
+#point8, #point12, #point17 {
+    grid-column-start: 5;
+    grid-column-end: 5;
+}
+
+#point5, #point13, #point20 {
+    grid-column-start: 6;
+    grid-column-end: 6;
+}
+
+#point2, #point14, #point23 {
+    grid-column-start: 7;
+    grid-column-end: 7;
+}
+
