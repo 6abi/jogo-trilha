@@ -102,6 +102,6 @@ A partida termina quando um jogador fica com apenas duas peças e o adversário 
 	
 <!-- Resultados -->
 <div align="center" class='container'>
-	<h2 align="center"> ⚡Referências ⚡</h2>
+	<h2 align="center"> ⚡Resultados - tracking ⚡</h2>
 </div>
 
