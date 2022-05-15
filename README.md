@@ -80,15 +80,9 @@ Hospedar o projeto no Github.
 <!-- How to execute -->
 <div align="left" class='container'>
 	<h2 align="left">🏃‍♀️ Como Executar este projeto? </h2>
-  <p align="left"> Clone o repositorio</p>
-  <!--
-	<p align="left"> 1. Tenha o Python3 instalado, caso execute localmente</p>
-  	<p align="left"> 1. Tenha o Jupyter instalado, caso execute localmente</p>
-  	<p align="left"> 1.1 Use um framework de sua preferência, Pycharm, Spider, Jupyter, etc</p>
-	<p align="left"> OBS: Neste projeto foi utilizado o Pycharm</p>
-  <p align="left">OU</p>
-	<p align="left"> 2. Tenha uma conta no Google Colab</p>
-	<p align="left"> 2.1 Crie um notebook e copie e cole os códigos nele para executar</p>
+  	<p align="left"> 1. Clone o repositorio</p>
+	<p align="left"> 2. npm install</p>
+	<p align="left"> 3. npm start</p>
 	<p align="left">Done ! ✅</p>
 -->
 </div>
