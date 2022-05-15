@@ -40,7 +40,11 @@ Hospedar o projeto no Github.
 		<tr>
 			<th> Criação das informações sobre a partida </th>
 			<th>✔</th>	
-		</tr>	
+		</tr>
+		<tr>
+			<th> Identificação de quem é o próximo a jogar </th>
+			<th>✔</th>	
+		</tr>		
 	</tbody>
 </table>
 
@@ -66,16 +70,10 @@ Hospedar o projeto no Github.
  -->
   
 <!-- Requirements -->
-<div align="left" class='container'>
-	<h2 align="left">👨‍💻 Pré-requisitos </h2>
-<!--
-	<p align="left">Python3 instalado</p>
-  <p align="left">Jupyter instalado</p>
-  	<p align="left">OU</p>
-  	<p align="left">Conta no Google Colab</p>
- -->
-</div>
-
+<!-- <div align="left" class='container'> -->
+<!-- <h2 align="left">👨‍💻 Pré-requisitos </h2> -->
+<!-- </div> -->
+<!--  -->
 
 <!-- How to execute -->
 <div align="left" class='container'>
