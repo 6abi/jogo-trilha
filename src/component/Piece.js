@@ -10,11 +10,11 @@ function Piece(props) {
             onClick={props.onClick}
             id={"point" + props.point}
             style={{
-                height: "40%",
-                width: "40%",
+                height: "50%",
+                width: "50%",
                 display: "inline-block",
                 border: "2px solid gray",
-                margin: "30% 30% 30% 30%",
+                margin: "25% 25% 25% 25%",
                 opacity: "1"}}
         >
         </Button>

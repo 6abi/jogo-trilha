@@ -8,6 +8,7 @@ const buttonVariants = Object.freeze({
     varPossibleMoves: "warning",
 });
 
+// classe que lida com as caracteristicas do tabuleiro
 class Board extends React.Component {
 
     renderPoint(i) {
@@ -21,6 +22,7 @@ class Board extends React.Component {
         );
     }
 
+    // variação do botão (peça) de acordo com o jogador
     getVariant(i) {
         if (this.props.gameInfo[i] === null) {
             return buttonVariants.varNull;
@@ -33,6 +35,7 @@ class Board extends React.Component {
         }
     }
 
+    // locais das peças no tabuleiro
     render() {
         const boardPoints = [];
         for (let i = 0; i < 24; i++) {
