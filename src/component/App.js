@@ -1,9 +1,10 @@
 import React from "react";
+
 import Game from '../service/Game';
 import Board from './Board';
 import GameInfo from './GameInfo';
 import Rules from './Rules';
-import {Alert} from "react-bootstrap";
+import {Alert,Toast, ToastContainer} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 let game = new Game();
@@ -20,8 +21,9 @@ class App extends React.Component {
             },
         };
     }
-
+    
     handleClick(i) {
+        
         let currentGameInfo = {
             playerLocations: this.state.playerLocations.slice(),
             activePlayer: this.state.playerInfo,
@@ -43,12 +45,20 @@ class App extends React.Component {
     render() {
         const winner = game.calculateWinner(this.state.playerInfo,this.state.playerLocations);
         let status;
+        let color;
+        const locationMessage = 'top';
+        let messageDefault = 'Próximo a jogar';
         if (winner != null) {
             status = 'VencFim de jogo! winner';
             game.phase = "Fim de jogo!: " + status;
         } else {
-            status = 'Próximo a jogar: ' + (this.state.playerInfo.player1 ? " Jogador 1 - Azul" : " Player 2 - Vermelho");
+            status =  (this.state.playerInfo.player1 ? " Jogador 1 - Azul" : " Player 2 - Vermelho");
         }
+
+        if (this.state.playerInfo.player1 === 'R'){
+            color = 'danger'
+        } else{color = 'primary'}
+
         return (
             <div className="game">
                 <div className="game-info">
@@ -61,7 +71,17 @@ class App extends React.Component {
                     <Rules/>
                 </div>
                 <div className="game-board">
-                    <Alert variant="primary">{status}</Alert>
+                    <div className="top-message">
+                        <Toast className="d-inline-block m-1" bg={color} key= 'secondary' position={locationMessage}>
+                            <Toast>
+                            <Toast.Header closeButton={false}>
+                                <strong className="mr-auto">{messageDefault}</strong>
+                                {/* <small>11 mins ago</small> */}
+                            </Toast.Header>
+                            </Toast>
+                            <Toast.Body>{status}</Toast.Body>
+                        </Toast>
+                    </div>
                     <Board
                         onClick={i => this.handleClick(i)}
                         gameInfo={this.state.playerLocations}

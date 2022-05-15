@@ -13,9 +13,9 @@ function Piece(props) {
                 height: "50%",
                 width: "50%",
                 display: "inline-block",
-                border: "2px solid gray",
+                border: "2px solid #8C52FF",
                 margin: "25% 25% 25% 25%",
-                opacity: "1"}}
+                color: "#8C52FFd"}}
         >
         </Button>
     );
