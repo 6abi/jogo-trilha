@@ -51,7 +51,6 @@ class Game {
     }
 
     calculateWinner(playerInfo, piecesLocations) {
-        // if it is phase1
         const winner = this.checkPossibleMoves(playerInfo, piecesLocations);
         if (playerInfo.currentMove !== this.actions.remove && winner != null) {
             return winner
@@ -69,9 +68,47 @@ class Game {
         if (playerInfo.pieceQuantity.player2 === 2) {
             return "Player 1";
         }
-        // if player's piece can not move to any point, opponent player wins
 
         return null
+    }
+
+    resetBoard(playerLocations) {
+        // set the color of the all empty points
+        for (let i = 0; i < playerLocations.length; i++) {
+            if (playerLocations[i] === null) {
+                document.getElementById("point" + i).className = 'rounded-circle btn btn-light';
+            }
+        }
+    }
+
+    removePieces(currentGameInfo, i) {
+        //"You should select one of opponent's piece to remove it"
+        if (currentGameInfo.label === currentGameInfo.playerLocations[i] || currentGameInfo.playerLocations[i] === null) {
+            return currentGameInfo;
+        }
+        //"A piece in an opponent's mill can only be removed if no other pieces are available."
+        if ((currentGameInfo.playerLocations[i] === this.checkMill(currentGameInfo, i)) && (this.checkForAllMill(currentGameInfo) === false)) {
+            return currentGameInfo;
+        }
+        currentGameInfo.playerLocations[i] = null;
+        // if the player removes the piece in phase 1, set next action as place
+        // if the player removes the piece in phase 2, set next action as select
+        if (this.initialPieceQty.player1 !== 0 || this.initialPieceQty.player2 !== 0) {
+            currentGameInfo.activePlayer.currentMove = this.actions.place;
+        } else {
+            currentGameInfo.activePlayer.currentMove = this.actions.select;
+        }
+        //after the remove action decrease the pieces quantity
+        if (currentGameInfo.activePlayer.player1) {
+            currentGameInfo.activePlayer.pieceQuantity.player2--;
+        } else {
+            currentGameInfo.activePlayer.pieceQuantity.player1--;
+        }
+        // the turn of the move is on the opponent player
+        currentGameInfo.activePlayer.player1 = !currentGameInfo.activePlayer.player1;
+        //delete "you can remove the opponent player piece" warning
+        this.warning = "";
+        return currentGameInfo;
     }
 }
 
