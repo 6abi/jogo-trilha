@@ -13,7 +13,7 @@ function Piece(props) {
                 height: "40%",
                 width: "40%",
                 display: "inline-block",
-                border: "2px solid gray",
+                border: "2px solid white",
                 margin: "30% 30% 30% 30%",
                 opacity: "1"}}
         >

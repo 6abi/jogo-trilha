@@ -4,6 +4,7 @@ import Board from './Board';
 import GameInfo from './GameInfo';
 import Rules from './Rules';
 import {Alert} from "react-bootstrap";
+import Logo from './../logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 let game = new Game();
@@ -25,8 +26,8 @@ class App extends React.Component {
         let currentGameInfo = {
             playerLocations: this.state.playerLocations.slice(),
             activePlayer: this.state.playerInfo,
-            color: this.state.playerInfo.player1 ? "blue" : "red",
-            label: this.state.playerInfo.player1 ? 'B' : 'R',
+            color: this.state.playerInfo.player1 ? "blue" : "yellow",
+            label: this.state.playerInfo.player1 ? 'B' : 'Y',
         };
         if (game.calculateWinner(currentGameInfo.activePlayer, currentGameInfo.playerLocations) != null) {
             return;
@@ -44,24 +45,24 @@ class App extends React.Component {
         const winner = game.calculateWinner(this.state.playerInfo,this.state.playerLocations);
         let status;
         if (winner != null) {
-            status = 'VencFim de jogo! winner';
-            game.phase = "Fim de jogo!: " + status;
+            status = 'Vitória do' + winner + ', Parabens!';
+            game.phase = "Satatus: Fim de jogo!";
         } else {
-            status = 'Próximo a jogar: ' + (this.state.playerInfo.player1 ? " Jogador 1 - Azul" : " Player 2 - Vermelho");
+            status = 'Vez do' + (this.state.playerInfo.player1 ? " player Azul" : " player Amarelo");
         }
         return (
             <div className="game">
                 <div className="game-info">
-                    <Alert variant="primary">Informações sobre o jogo</Alert>
-                    <Alert variant="warning">{game.phase + game.warning}</Alert>
+                    <img  src={Logo} className="logo"></img>
                     <GameInfo
                         pieceQuantity={this.state.playerInfo.pieceQuantity}
                         initialPieceQuantity={game.initialPieceQty}
                     />
+                    <Alert variant="warning">{game.phase + game.warning}</Alert>
+                    <Alert variant="warning">{status}</Alert>
                     <Rules/>
                 </div>
                 <div className="game-board">
-                    <Alert variant="primary">{status}</Alert>
                     <Board
                         onClick={i => this.handleClick(i)}
                         gameInfo={this.state.playerLocations}

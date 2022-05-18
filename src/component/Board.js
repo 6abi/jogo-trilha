@@ -28,7 +28,7 @@ class Board extends React.Component {
         if (this.props.gameInfo[i] === 'B') {
             return buttonVariants.varPlayer1;
         }
-        if (this.props.gameInfo[i] === 'R') {
+        if (this.props.gameInfo[i] === 'Y') {
             return buttonVariants.varPlayer2;
         }
     }

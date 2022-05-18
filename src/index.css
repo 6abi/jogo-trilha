@@ -1,5 +1,7 @@
 
 body {
+    background-image: linear-gradient(180deg, #130122, #240d4a)!important;
+    background-color: #130122!important;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -27,7 +29,7 @@ td {
     text-align: center;
 }
 .game-rules {
-    margin-top: 50px;
+    margin-top: 10px;
     font-size: 24px;
 }
 .accordion{
@@ -94,3 +96,106 @@ td {
     grid-column-end: 7;
 }
 
+.btn-danger, .btn-danger.disabled, .btn-danger:disabled {
+    background-color: #fff52f!important;
+}
+
+.btn-primary, .btn-primary.disabled, .btn-primary:disabled {
+    background-color: #1ecdff!important;
+
+}
+
+.btn-warning {
+    background-color: var(--bs-table-bg)!important;
+}
+
+.alert-warning {
+    color: #ff006b!important;
+    border-color: #ff006b!important;
+    text-align: center!important;
+    border-width: 2px!important;
+    background-color: var(--bs-table-bg)!important;
+}
+
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #ff006b!important;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #ff006b!important;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #ff006b!important;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #ff006b!important;
+    vertical-align: top;
+    border-color: #ff006b!important;
+}
+
+.table-bordered>:not(caption)>*>* {
+    border-width: 1px 1px!important;
+}
+
+.style-th {
+    border-top-color: var(--bs-table-bg)!important;
+    border-left-color: var(--bs-table-bg);
+}
+
+.accordion-item {
+    background-color: transparent!important;
+    border: 1px solid #ff006b!important;
+    color: #ff006b!important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ff006b;
+    background-color: transparent;
+    box-shadow: inset 0 -1px 0 #ff006b;
+}
+
+.accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: #ff006b!important;
+    text-align: left;
+    background-color: transparent!important;
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
+}
+
+
+
+.accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out!important;
+}
+
+
+.mb0 {
+    margin-bottom: 0!important;
+}
+
+
+.grid-container {
+    position: absolute;
+    top: 0!important;
+  }
+
+.logo {
+width: 30%;
+margin-bottom: -30px;
+}
